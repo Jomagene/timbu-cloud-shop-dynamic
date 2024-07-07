@@ -30,27 +30,26 @@ To get a local copy up and running, follow these steps:
 ### Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/Jomagene/timbu-cloud-shop.git
-    ```
+   ```bash
+   git clone https://github.com/Jomagene/timbu-cloud-shop.git
+   ```
 2. Navigate to the project directory:
-    ```bash
-    cd timbu-cloud-shop
-    ```
+   ```bash
+   cd timbu-cloud-shop
+   ```
 3. Install dependencies:
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 4. Start the development server:
-    ```bash
-    npm run dev
-    # or
-    yarn start
-    ```
+   ```bash
+   npm run dev
+   # or
+   yarn start
+   ```
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
