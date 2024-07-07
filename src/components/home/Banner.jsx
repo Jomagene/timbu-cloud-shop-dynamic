@@ -1,5 +1,5 @@
 function Banner() {
-  return <section>Banner</section>;
+  return <section className="pt-[70px]"></section>;
 }
 
 export default Banner;

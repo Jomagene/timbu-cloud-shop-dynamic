@@ -1,5 +1,5 @@
-function Button({ content }) {
-  return <button className="">{content}</button>;
+function Button({ content, styles }) {
+  return <button className={`rounded-[5px] p-3 ${styles}`}>{content}</button>;
 }
 
 export default Button;
