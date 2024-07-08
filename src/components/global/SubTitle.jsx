@@ -1,7 +1,7 @@
-function SubTitle({ content }) {
+function SubTitle({ content, style }) {
   return (
-    <div className="">
-      <h3>{content}</h3>
+    <div>
+      <h3 className={`text-[20px] lg:text-[32px] ${style}`}>{content}</h3>
     </div>
   );
 }

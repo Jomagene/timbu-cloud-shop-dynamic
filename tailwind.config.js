@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      letterSpacing: {
+        "-6%": "-0.06em", // 1% = 0.01em, so -6% = -0.06em
+      },
     },
   },
   plugins: [],
