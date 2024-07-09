@@ -4,10 +4,22 @@ import {
   favorite,
   pant2,
 } from "../../assets/icons-images";
+import React from "react";
+import {
+  Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+} from "@material-tailwind/react";
 
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import { Link } from "react-router-dom";
 
 function Details() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(!open);
+
   return (
     <div className="flex-[1] flex flex-col gap-[20px]">
       <div>
@@ -38,9 +50,77 @@ function Details() {
         <option>XXXL</option>
       </select>
       <div className="flex justify-between">
-        <button className="text-[18px] w-[86%] bg-[#F15025] text-white text-center p-[10px] rounded-[5px]">
-          Add to cart
-        </button>
+        <>
+          <Button
+            onClick={handleOpen}
+            style={{
+              fontSize: "18px",
+              backgroundColor: "#F15025",
+              width: "86%",
+              color: "white",
+              textAlign: "center",
+              padding: "10px",
+              borderRadius: "5px",
+            }}>
+            Add to cart
+          </Button>
+          <Dialog
+            open={open}
+            handler={handleOpen}
+            animate={{
+              mount: { scale: 1, y: 0 },
+              unmount: { scale: 0.9, y: -100 },
+            }}>
+            <DialogHeader
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                borderBottom: "solid 1px #E1DDDD",
+              }}>
+              1 Item added
+            </DialogHeader>
+            <DialogBody
+              style={{
+                display: "flex",
+                gap: "20px",
+                justifyContent: "center",
+              }}>
+              <div className="h-[200px]">
+                <img src={pant2} alt="" className="h-[90%]" />
+              </div>
+              <div className="flex flex-col gap-[7px]">
+                <span className="text-[18px] font-semibold">Ochid Filip</span>
+                <span className="text-[18px] font-semibold">£32.99</span>
+                <span className="text-[18px] font-semibold">
+                  Size: Medium (M)
+                </span>
+              </div>
+            </DialogBody>
+            <DialogFooter>
+              <Link
+                to="/product/cart"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}>
+                <Button
+                  onClick={handleOpen}
+                  style={{
+                    fontSize: "18px",
+                    backgroundColor: "#F15025",
+                    width: "60%",
+                    color: "white",
+                    textAlign: "center",
+                    padding: "15px",
+                    borderRadius: "5px",
+                  }}>
+                  Go to cart
+                </Button>
+              </Link>
+            </DialogFooter>
+          </Dialog>
+        </>
         <div className="p-[6px] rounded-[5px] bg-[#E6E8E6]">
           <img src={favorite} alt="" />
         </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { mastercard, paypal, visa } from "../../assets/icons-images";
 
 function CartPay() {
@@ -19,9 +20,11 @@ function CartPay() {
         <span>Total</span>
         <span>£37.99</span>
       </div>
-      <button className="p-[10px] bg-[#F15025] rounded-md w-full text-white font-semibold ">
-        Check out
-      </button>
+      <Link to="/product/payment">
+        <button className="p-[10px] bg-[#F15025] rounded-md w-full text-white font-semibold ">
+          Check out
+        </button>
+      </Link>
       <p className="font-medium">Payment Method</p>
       <div className="flex justify-between">
         <img src={visa} alt="" className="w-[60px] md:w-[80px]" />

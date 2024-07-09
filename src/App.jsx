@@ -5,6 +5,7 @@ import Layout from "./components/layout/Layout";
 import Cart from "./components/pages/Cart";
 import Home from "./components/pages/Home";
 import ProductDetails from "./components/pages/ProductDetails";
+import Payment from "./components/pages/Payment";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
           {
             path: "cart",
             element: <Cart />,
+          },
+          {
+            path: "payment",
+            element: <Payment />,
           },
         ],
       },
