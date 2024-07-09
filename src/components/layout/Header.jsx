@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { cart, favorite, profile } from "../../assets/icons-images";
 import Button from "../global/Button";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -10,13 +11,21 @@ function Header() {
           <span className="">A</span>
           <span className="text-[#F15025]">T</span>
         </h1>
-        <nav className="hidden sm:flex text-[16px] w-[356px] justify-between items-center">
+        <nav className="hidden sm:flex text-[16px] w-[356px] justify-between items-center font-semibold">
+          <Link to="/">
+            <Button
+              content="Home"
+              styles=" hover:border-b-[4px] border-solid border-b-[#F15025] text-[#F15025] "
+            />
+          </Link>
           <Button
-            content="Home"
-            styles="border-b-[2px] border-solid border-b-[#F15025] text-[#F15025]"
+            content="About Us"
+            styles=" hover:border-b-[4px] border-solid border-b-[#F15025] hover:text-[#F15025]"
           />
-          <Button content="About Us" />
-          <Button content="Contact Us" />
+          <Button
+            content="Contact Us"
+            styles=" hover:border-b-[4px] border-solid border-b-[#F15025] hover:text-[#F15025] "
+          />
         </nav>
         <div className="hidden sm:flex w-[158px] justify-between">
           <img src={favorite} alt="" />

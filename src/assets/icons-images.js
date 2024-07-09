@@ -42,6 +42,9 @@ import profile3 from "./images/profiles/profile3.jpg";
 import profile4 from "./images/profiles/profile4.jpg";
 import profile5 from "./images/profiles/profile5.jpg";
 import profile6 from "./images/profiles/profile6.jpg";
+import visa from "./icons/visa.svg";
+import paypal from "./icons/paypal.svg";
+import mastercard from "./icons/mastercard.svg";
 
 export {
   cart,
@@ -88,4 +91,7 @@ export {
   profile4,
   profile5,
   profile6,
+  visa,
+  paypal,
+  mastercard,
 };
