@@ -45,6 +45,8 @@ import profile6 from "./images/profiles/profile6.jpg";
 import visa from "./icons/visa.svg";
 import paypal from "./icons/paypal.svg";
 import mastercard from "./icons/mastercard.svg";
+import black_pant2 from "./images/Men/black-pant2.png";
+import blue_pant2 from "./images/Men/blue-pant2.webp";
 
 export {
   cart,
@@ -94,4 +96,6 @@ export {
   visa,
   paypal,
   mastercard,
+  black_pant2,
+  blue_pant2,
 };

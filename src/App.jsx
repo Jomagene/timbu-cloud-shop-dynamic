@@ -4,6 +4,7 @@ import Layout from "./components/layout/Layout";
 
 import Cart from "./components/pages/Cart";
 import Home from "./components/pages/Home";
+import ProductDetails from "./components/pages/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +16,17 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/cart",
-        element: <Cart />,
+        path: "/product",
+        children: [
+          {
+            index: true,
+            element: <ProductDetails />,
+          },
+          {
+            path: "cart",
+            element: <Cart />,
+          },
+        ],
       },
     ],
   },
@@ -25,7 +35,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="flex flex-col items-center">
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </div>
   );
 }

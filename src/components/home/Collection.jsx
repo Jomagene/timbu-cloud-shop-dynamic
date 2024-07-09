@@ -4,7 +4,7 @@ import Product from "../global/Product";
 import Subsubtitle from "../global/Subsubtitle";
 import { motion } from "framer-motion";
 
-function Collection({ type, content }) {
+function Collection({ type, content, yes }) {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
 
@@ -13,7 +13,7 @@ function Collection({ type, content }) {
   }, []);
   return (
     <>
-      <Subsubtitle content={content} />
+      {yes || <Subsubtitle content={content} />}
       <motion.div ref={carousel} className="cursor-grab">
         <motion.div
           drag="x"

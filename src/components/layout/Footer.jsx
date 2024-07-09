@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-[#E6E8E6]  w-full flex justify-center p-[20px] font-poppins">
+    <footer className="bg-[#E6E8E6]  w-full flex justify-center pt-[20px] font-poppins">
       <div className="wrapper flex justify-between">
         <section className="flex flex-col gap-[24px]">
           <h2 className="text-[16px] font-bold">COLLECTIONS</h2>
@@ -16,7 +16,7 @@ function Footer() {
             <span>Accessories</span>
           </div>
         </section>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:w-[60%] justify-center">
           <section className="flex flex-col gap-[20px] pb-[20px]">
             <h2 className="text-[16px] font-bold ofnt-[poppins]">
               CUSTOM SERVICES

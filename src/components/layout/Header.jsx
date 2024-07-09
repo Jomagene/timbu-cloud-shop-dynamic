@@ -27,12 +27,10 @@ function Header() {
             styles=" hover:border-b-[4px] border-solid border-b-[#F15025] hover:text-[#F15025] "
           />
         </nav>
-        <div className="hidden sm:flex w-[158px] justify-between">
-          <img src={favorite} alt="" />
-          <img src={cart} alt="" />
-          <div className="h-[50px] w-[50px] object-cover overflow-hidden rounded-full">
-            <img src={profile} alt="" className="h-[100%]" />
-          </div>
+        <div className="hidden sm:flex">
+          <Link to="/product/cart">
+            <img src={cart} alt="" className="hover:scale-110" />
+          </Link>
         </div>
         <div className="sm:hidden">
           <MenuIcon style={{ fontSize: 40, color: "#F15025" }} />
