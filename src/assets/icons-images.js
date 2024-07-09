@@ -24,7 +24,7 @@ import dress3 from "./images/dress/dress3.webp";
 import dress4 from "./images/dress/dress4.webp";
 import dress5 from "./images/dress/dress5.webp";
 import dress6 from "./images/dress/dress6.webp";
-import bag1 from "./images/bags/bag1.webp";
+import bag1 from "./images/bags/Mybag1.webp";
 import bag2 from "./images/bags/bag2.webp";
 import bag3 from "./images/bags/bag3.webp";
 import bag4 from "./images/bags/bag4.webp";
