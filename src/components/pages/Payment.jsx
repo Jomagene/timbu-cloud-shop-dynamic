@@ -1,4 +1,4 @@
-import { mastercard, paypal, visa } from "../../assets/icons-images";
+import { mastercard, visa } from "../../assets/icons-images";
 
 function Payment() {
   return (
