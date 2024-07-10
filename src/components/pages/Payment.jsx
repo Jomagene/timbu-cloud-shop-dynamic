@@ -112,7 +112,7 @@ function Payment() {
               <span>£37.99</span>
             </div>
             <Link to="/product/payment/success">
-              <button className="p-[10px] bg-[#DFDDDC] rounded-md w-full font-semibold">
+              <button className="p-[10px] bg-[#DFDDDC] rounded-md w-full font-semibold border border-solid border-[]">
                 Confirm payment
               </button>
             </Link>

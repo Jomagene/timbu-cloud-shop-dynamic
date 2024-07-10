@@ -47,6 +47,7 @@ import paypal from "./icons/paypal.svg";
 import mastercard from "./icons/mastercard.svg";
 import black_pant2 from "./images/Men/black-pant2.png";
 import blue_pant2 from "./images/Men/blue-pant2.webp";
+import pdf from "./icons/pdf.png";
 
 export {
   cart,
@@ -98,4 +99,5 @@ export {
   mastercard,
   black_pant2,
   blue_pant2,
+  pdf,
 };

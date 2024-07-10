@@ -6,6 +6,7 @@ import Cart from "./components/pages/Cart";
 import Home from "./components/pages/Home";
 import ProductDetails from "./components/pages/ProductDetails";
 import Payment from "./components/pages/Payment";
+import Success from "./components/pages/Success";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,16 @@ const router = createBrowserRouter([
           },
           {
             path: "payment",
-            element: <Payment />,
+            children: [
+              {
+                index: true,
+                element: <Payment />,
+              },
+              {
+                path: "success",
+                element: <Success />,
+              },
+            ],
           },
         ],
       },
