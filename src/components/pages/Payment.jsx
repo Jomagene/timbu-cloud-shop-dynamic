@@ -12,23 +12,23 @@ function Payment() {
         Payment
       </h1>
 
-      <section className="flex justify-between">
-        <div className="flex flex-col gap-[20px] w-[35%]">
-          <div className="flex gap-[50px] items-center">
+      <section className="flex justify-between flex-wrap">
+        <div className="flex flex-col gap-[20px] w-[35%] min-w-[300px] pb-10">
+          <div className="flex gap-[40px] items-center">
             <span className="h-[30px] w-[30px] rounded-full bg-[#CED0CE]"></span>
             <div className="flex gap-[14px] items-center">
               <img src={mastercard} alt="" className="h-[40px]" />
               <span className="text-[18px]">Master card</span>
             </div>
           </div>
-          <div className="flex gap-[50px] items-center">
+          <div className="flex gap-[40px] items-center">
             <span className="h-[30px] w-[30px] rounded-full bg-[#CED0CE]"></span>
             <div className="flex gap-[14px] items-center">
               <img src={visa} alt="" className="h-[30px]" />
               <span className="text-[18px]">Visa</span>
             </div>
           </div>
-          <div className="flex gap-[50px] items-center">
+          <div className="flex gap-[40px] items-center">
             <span className="h-[30px] w-[30px] rounded-full bg-[#CED0CE]"></span>
             <div className="flex items-center">
               <img src="/GroupPaypal.png" alt="" className="h-[25px]" />
@@ -36,7 +36,7 @@ function Payment() {
           </div>
         </div>
 
-        <div className="w-[45%]">
+        <div className="w-[45%] min-w-[350px]">
           <div className="rounded-[10px] p-[30px] flex flex-col gap-[20px] bg-[#E6E8E6]">
             <div className="flex flex-col gap-[20px]">
               <h1 className="text-[#F15025] text-[16px]">
@@ -50,8 +50,8 @@ function Payment() {
                   className="bg-[#CED0CE] h-[38px] w-full rounded-[5px]"
                 />
 
-                <div className="flex gap-[20%]">
-                  <div className="flex-[1] flex flex-col gap-[10px]">
+                <div className="">
+                  <div className="flex-[1] flex flex-col justify-between">
                     <h1 className="text-[16px]">Postal code</h1>
                     <input
                       type="text"

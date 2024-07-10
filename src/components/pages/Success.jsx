@@ -13,7 +13,7 @@ function Success() {
         </div>
         <div className="flex gap-5">
           <img src={pdf} alt="" className="h-[40px]" />
-          <span>Download PDF</span>
+          <a href="">Download PDF</a>
         </div>
       </div>
     </main>
