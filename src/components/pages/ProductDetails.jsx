@@ -1,6 +1,7 @@
 import GridPicture from "../product-details/GridPicture";
 import Details from "../product-details/Details";
 import Collection from "../home/Collection";
+import ReturnToTopButton from "../global/ReturnToTop";
 
 function ProductDetails() {
   return (
@@ -13,6 +14,7 @@ function ProductDetails() {
       <Collection type="men" content="pants" yes={true} />
       <h1 className="text-[30px] font-medium">Complementaries</h1>
       <Collection type="men" content="shoes" yes={true} />
+      <ReturnToTopButton />
     </main>
   );
 }

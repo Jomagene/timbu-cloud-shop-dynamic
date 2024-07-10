@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 function Header() {
   return (
-    <header className="flex justify-center w-full my-[30px]">
+    <header className="flex justify-center w-full my-[30px]" id="header">
       <div className="wrapper flex justify-between items-center">
         <Link to="/">
           <h1 className="font-black text-[40px]">

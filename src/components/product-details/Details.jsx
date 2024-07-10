@@ -26,7 +26,7 @@ function Details() {
         <h1 className="font-normal text-[22px] pb-4">Ochild Flip</h1>
         <p className="font-medium">£32.99</p>
       </div>
-      <div className="hidden lg:flex gap-3">
+      <div className="hidden xl:flex gap-3">
         <div className="flex-[1]">
           <img src={pant2} alt="" className="rounded-[5px]" />
           <h2 className="text-center pt-[10px]">Grey</h2>

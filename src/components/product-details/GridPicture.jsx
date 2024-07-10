@@ -3,7 +3,7 @@ import { black_pant2, blue_pant2, pant2 } from "../../assets/icons-images";
 export default function GridPicture() {
   return (
     <>
-      <div className="hidden sm:flex lg:hidden flex-[1]  w-[100%] gap-[10px]">
+      <div className="hidden sm:flex xl:hidden flex-[1]  w-[100%] gap-[10px]">
         <div className="flex flex-[1] flex-col h-full gap-[10px]">
           <img src={pant2} alt="" className="h-[20%]" />
           <img src={pant2} alt="" className="flex-[1]" />
@@ -52,7 +52,7 @@ export default function GridPicture() {
           </div>
         </div>
       </div>
-      <div className="hidden lg:flex flex-[1]  gap-[10px]">
+      <div className="hidden xl:flex flex-[1]  gap-[10px]">
         <div className="flex flex-[1] flex-col h-[480px] justify-between">
           <img src={pant2} alt="" className="h-[32%]" />
           <img src={pant2} alt="" className="h-[32%]" />

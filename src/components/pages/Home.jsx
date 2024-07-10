@@ -6,6 +6,7 @@ import Kids from "../home/Kids";
 import Ancors from "../home/Ancors";
 import IconLabel from "../global/IconLabel";
 import { delivery, handshaking } from "../../assets/icons-images";
+import ReturnToTop from "../global/ReturnToTop";
 
 function Home() {
   const icon_label = [
@@ -26,6 +27,7 @@ function Home() {
       <Women />
       <Kids />
       <Testimonials />
+      <ReturnToTop />
     </main>
   );
 }

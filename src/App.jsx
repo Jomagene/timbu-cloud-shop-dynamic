@@ -1,4 +1,8 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  ScrollRestoration,
+  createBrowserRouter,
+} from "react-router-dom";
 import "./styles/global.css";
 import Layout from "./components/layout/Layout";
 
@@ -50,7 +54,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="flex flex-col items-center">
-      <RouterProvider router={router} />
+      <RouterProvider router={router}>
+        <ScrollRestoration />
+        <RouterProvider router={router} />
+      </RouterProvider>
     </div>
   );
 }
