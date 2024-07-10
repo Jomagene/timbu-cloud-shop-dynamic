@@ -1,12 +1,11 @@
 import GridPicture from "../product-details/GridPicture";
 import Details from "../product-details/Details";
 import Collection from "../home/Collection";
-import SubTitle from "../global/SubTitle";
 
 function ProductDetails() {
   return (
     <main className="wrapper mb-24 overflow-hidden flex flex-col gap-5">
-      <div className=" flex justify-between">
+      <div className=" flex flex-col lg:flex-row justify-between">
         <GridPicture />
         <Details />
       </div>

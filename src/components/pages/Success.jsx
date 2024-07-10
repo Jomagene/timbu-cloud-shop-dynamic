@@ -1,4 +1,3 @@
-import React from "react";
 import CartDetail from "../cart/CartDetail";
 import { pdf } from "../../assets/icons-images";
 
