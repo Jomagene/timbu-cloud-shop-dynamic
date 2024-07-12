@@ -29,7 +29,7 @@ const ReturnToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="h-[50px] hover:bg-[#222222] w-[200px] text-white font-medium bg-black flex items-center justify-center gap-2 fixed bottom-[10px] right-[2%] rounded-xl">
+          className="h-[50px] hover:bg-[#222222] w-[200px] text-white font-medium bg-black flex items-center justify-center gap-2 fixed bottom-[320px] right-[60px] rounded-xl">
           Return to top
           <span className="h-[35px] w-[35px] bg-white text-black rounded-md">
             <ArrowUpwardIcon />

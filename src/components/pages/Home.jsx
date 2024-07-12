@@ -17,7 +17,7 @@ function Home() {
   return (
     <main className="wrapper pt-[25px]">
       <Banner />
-      <div className="h-[30px] lg:h-[100px] bg-black flex justify-between items-center mt-[10px] lg:mt-[30px]">
+      <div className="h-[25px] md:h-[35px] lg:h-[110px] bg-[#151515] flex justify-between items-center mt-0 md:mt-[10px] lg:mt-[30px] sm:px-[10px] p-[0]">
         {icon_label.map((e) => (
           <IconLabel key={e.id} icon={e.icon} label={e.label} />
         ))}

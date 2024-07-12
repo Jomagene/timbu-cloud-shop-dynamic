@@ -4,9 +4,9 @@ import { favorite, pant2 } from "../../assets/icons-images";
 function Product({ picture, title, price, like }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="relative h-[175px] md:h-[200px] lg:h-[250px] w-[140px] md:w-[160px] lg:w-[200px]">
+      <div className="relative h-[150px] w-[100px] sm:h-[210px] sm:w-[140px] md:h-[240px] md:w-[160px] lg:h-[360px] lg:w-[240px]">
         {picture == pant2 ? (
-          <Link to="/product/#header">
+          <Link to="/product">
             <div
               className="border border-solid border-[#FF5F00] rounded-[10px] rounded-tr-[5px] h-full w-full bg-cover"
               style={{ backgroundImage: `url(${picture})` }}></div>

@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { testimonials } from "../../data";
-import SubTitle from "../global/SubTitle";
 import Testimony from "../global/Testimony";
 import { motion } from "framer-motion";
 
@@ -13,11 +12,12 @@ function Testimonials() {
   }, []);
 
   return (
-    <section className="overflow-hidden py-[30px] border-solid border-[5px] border-[#FF5F00] bg-[#FF5F00]">
-      <SubTitle
-        content="Testimonials"
-        style="text-white pb-[20px] text-center"
-      />
+    <section className="overflow-hidden py-[5px] md:py-[15px] lg:py-[20px] border-solid border-[5px] border-[#FF5F00] bg-[#FF5F00]">
+      <h3
+        className={`text-[16px] md:text-[20px] lg:text-[32px] text-center text-white pb-[20px] font-medium`}>
+        Testimonials
+      </h3>
+
       <motion.div ref={carousel} className="cursor-grab">
         <motion.div
           drag="x"

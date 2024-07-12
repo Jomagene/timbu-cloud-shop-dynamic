@@ -3,9 +3,9 @@ import Title from "../global/Title";
 
 function Ancors() {
   return (
-    <section className="flex flex-col sm:flex-row items-center sm:justify-between border-b border-solid border-gray-200 sm:border-none py-[12px]">
+    <section className="flex flex-col sm:flex-row items-center sm:justify-between border-b border-solid border-gray-200 sm:border-none py-[12px] gap-2">
       <Title title="Categories" />
-      <div className="flex text-white gap-[35px] w-fit">
+      <div className="flex text-white gap-[24px] md:gap-[35px] w-fit">
         <a href="#men">
           <Button
             content="Men"
