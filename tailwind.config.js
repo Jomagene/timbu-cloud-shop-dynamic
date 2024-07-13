@@ -7,6 +7,9 @@ export default withMT({
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      screens: {
+        custom_900: "900px",
+      },
     },
   },
   plugins: [],
