@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
-import { cart, favorite, profile } from "../../assets/icons-images";
+import { cart } from "../../assets/icons-images";
 import Button from "../global/Button";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { useState } from "react";
 
 function Header() {
+  let [toggle, setToggle] = useState(false);
+
   return (
     <header
       className="flex justify-center w-full mb-[30px] mt-[45px] md:"
@@ -19,7 +23,7 @@ function Header() {
           <Link to="/">
             <Button
               content="Home"
-              styles="border-b-[2px] border-solid border-b-[#F15025] text-[#F15025] "
+              styles="border-b-[2px] border-solid border-b-[#F15025] text-[#F15025]"
             />
           </Link>
           <Button
@@ -40,10 +44,39 @@ function Header() {
             />
           </Link>
         </div>
-        <div className="sm:hidden">
-          <MenuIcon
-            style={{ height: "20px", width: "30px", color: "#F15025" }}
-          />
+        <div className="sm:hidden flex flex-1 justify-end items-center relative">
+          <div
+            onClick={() => setToggle((prev) => !prev)}
+            className="cursor-pointer h-fit w-fit">
+            {!toggle ? (
+              <MenuIcon
+                style={{ height: "28px", width: "28px", color: "#F15025" }}
+              />
+            ) : (
+              <CloseIcon
+                style={{ height: "28px", width: "28px", color: "#F15025" }}
+              />
+            )}
+          </div>
+
+          <div
+            className={`${
+              toggle ? "flex" : "hidden"
+            } p-6 bg-black-gradient absolute top-5 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
+            <nav className=" flex flex-col justify-end items-center flex-1">
+              <Link to="/">
+                <Button
+                  content="Home"
+                  styles="w-full text-[#F15025] hover:bg-white font-medium"
+                />
+              </Link>
+              <Button content="About Us" styles=" hover:bg-white font-medium" />
+              <Button
+                content="Contact Us"
+                styles=" hover:bg-white font-medium"
+              />
+            </nav>
+          </div>
         </div>
       </div>
     </header>

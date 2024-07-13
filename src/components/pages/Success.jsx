@@ -3,17 +3,23 @@ import { pdf } from "../../assets/icons-images";
 
 function Success() {
   return (
-    <main className="wrapper mb-24 overflow-hidden flex flex-col gap-5">
+    <main className="wrapper mb-24 overflow-hidden flex flex-col">
       <h1 className="font-semibold text-[25px] sm:text-[30px] leading-[30px] sm:leading-[50px] tracking-[-0.06em] mb-5">
         Successful
       </h1>
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row justify-between items-start">
         <div className="w-[50%]">
           <CartDetail yes={true} />
         </div>
-        <div className="flex gap-5">
-          <img src={pdf} alt="" className="h-[40px]" />
-          <a href="">Download PDF</a>
+        <div className="flex gap-5 py-5 text-[10px] sm:text-[14px] lg:text-[18px]">
+          <img
+            src={pdf}
+            alt=""
+            className="h-[15px] sm:h-[30px] lg:h-[35px] w-auto"
+          />
+          <a href="#" className="">
+            Download PDF
+          </a>
         </div>
       </div>
     </main>
