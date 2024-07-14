@@ -1,12 +1,18 @@
 import { useState, useRef, useEffect } from "react";
-import products_data from "../../data";
 import Product from "../global/Product";
 import Subsubtitle from "../global/Subsubtitle";
 import { motion } from "framer-motion";
+import { useProducts } from "../../productContext";
 
 function Collection({ type, content, yes }) {
+  const { products_datA, loading, error } = useProducts();
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
   const [width, setWidth] = useState(0);
   const carousel = useRef();
+
+  console.log(products_datA);
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
@@ -19,7 +25,7 @@ function Collection({ type, content, yes }) {
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
           className="flex gap-[2.5%]">
-          {products_data[type][content].map((item) => {
+          {products_datA[type][content].map((item) => {
             return (
               <motion.div key={item.id}>
                 <Product

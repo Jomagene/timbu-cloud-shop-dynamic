@@ -11,6 +11,7 @@ import Home from "./components/pages/Home";
 import ProductDetails from "./components/pages/ProductDetails";
 import Payment from "./components/pages/Payment";
 import Success from "./components/pages/Success";
+import { ProductProvider } from "./productContext";
 
 const router = createBrowserRouter([
   {
@@ -53,12 +54,14 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="flex flex-col items-center">
-      <RouterProvider router={router}>
-        <ScrollRestoration />
-        <RouterProvider router={router} />
-      </RouterProvider>
-    </div>
+    <ProductProvider>
+      <div className="flex flex-col items-center">
+        <RouterProvider router={router}>
+          <ScrollRestoration />
+          <RouterProvider router={router} />
+        </RouterProvider>
+      </div>
+    </ProductProvider>
   );
 }
 
