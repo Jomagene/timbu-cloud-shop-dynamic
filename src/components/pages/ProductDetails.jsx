@@ -7,14 +7,24 @@ import { useProducts } from "../../productContext";
 
 function ProductDetails() {
   const { products_datA, loading, error } = useProducts();
-  const location = useLocation();
 
-  console.log(location.state);
-  console.log(products_datA);
+  const location = useLocation();
+  let { id, type, content } = location.state;
+  console.log(id, type, content);
+  const element = products_datA[type][content].filter((item) => item.id == id);
+
+  console.log(element);
+
+  const [pic, pic1, pic2, pic3] = [
+    element[0].picture,
+    element[0].pic1,
+    element[0].pic2,
+    element[0].pic3,
+  ];
   return (
     <main className="wrapper mb-24 overflow-hidden flex flex-col gap-5">
       <div className=" flex flex-col lg:flex-row justify-between">
-        <GridPicture />
+        <GridPicture pic={pic} pic1={pic1} pic3={pic3} pic2={pic2} />
         <Details />
       </div>
       <h1 className="text-[30px] font-medium">Other related pants</h1>

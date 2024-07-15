@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { favorite } from "../../assets/icons-images";
 
-function Product({ picture, title, price, like, id }) {
+function Product({ picture, title, price, like, id, type, content }) {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/product", { state: { id: id } });
+    navigate("/product", { state: { id: id, type: type, content: content } });
   }
   return (
     <div className="flex flex-col items-center">

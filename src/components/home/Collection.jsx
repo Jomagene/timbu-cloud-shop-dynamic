@@ -23,7 +23,7 @@ function Collection({ type, content, yes }) {
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
           className="flex gap-[2.5%]">
-          {products_datA[type][content].map((item, id) => {
+          {products_datA[type][content].map((item) => {
             return (
               <motion.div key={item.id}>
                 <Product
@@ -31,7 +31,9 @@ function Collection({ type, content, yes }) {
                   title={item.title}
                   price={item.price}
                   like={true}
-                  id={id}
+                  id={item.id}
+                  type={type}
+                  content={content}
                 />
               </motion.div>
             );
