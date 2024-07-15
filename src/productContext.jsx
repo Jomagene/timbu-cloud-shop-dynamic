@@ -81,7 +81,7 @@ export const ProductProvider = ({ children }) => {
     (item) => `https://api.timbu.cloud/images/${item.photos[3]?.url}`
   );
   const [dress1, dress2, dress3, dress4, dress5, dress6] = dresses.map(
-    (item) => `https://api.timbu.cloud/images/${item.photos[3]?.url}`
+    (item) => `https://api.timbu.cloud/images/${item.photos[1]?.url}`
   );
   const [bag1, bag2, bag3, bag4, bag5, bag6] = purses.map(
     (item) => `https://api.timbu.cloud/images/${item.photos[3]?.url}`
@@ -123,48 +123,48 @@ export const ProductProvider = ({ children }) => {
   const products_datA = {
     men: {
       pants: [
-        { id: 1, picture: pant1, title: pTitle1, price: pPrice1 },
-        { id: 2, picture: pant2, title: pTitle2, price: pPrice2 },
-        { id: 3, picture: pant3, title: pTitle3, price: pPrice3 },
-        { id: 4, picture: pant4, title: pTitle4, price: pPrice4 },
-        { id: 5, picture: pant5, title: pTitle5, price: pPrice5 },
-        { id: 6, picture: pant6, title: pTitle6, price: pPrice6 },
+        { id: "p1", picture: pant1, title: pTitle1, price: pPrice1 },
+        { id: "p2", picture: pant2, title: pTitle2, price: pPrice2 },
+        { id: "p3", picture: pant3, title: pTitle3, price: pPrice3 },
+        { id: "p4", picture: pant4, title: pTitle4, price: pPrice4 },
+        { id: "p5", picture: pant5, title: pTitle5, price: pPrice5 },
+        { id: "p6", picture: pant6, title: pTitle6, price: pPrice6 },
       ],
       shoes: [
-        { id: 1, picture: shoe1, title: sTitle1, price: sPrice1 },
-        { id: 2, picture: shoe2, title: sTitle2, price: sPrice2 },
-        { id: 3, picture: shoe3, title: sTitle3, price: sPrice3 },
-        { id: 4, picture: shoe4, title: sTitle4, price: sPrice4 },
-        { id: 5, picture: shoe5, title: sTitle5, price: sPrice5 },
-        { id: 6, picture: shoe6, title: sTitle6, price: sPrice6 },
+        { id: "s1", picture: shoe1, title: sTitle1, price: sPrice1 },
+        { id: "s2", picture: shoe2, title: sTitle2, price: sPrice2 },
+        { id: "s3", picture: shoe3, title: sTitle3, price: sPrice3 },
+        { id: "s4", picture: shoe4, title: sTitle4, price: sPrice4 },
+        { id: "s5", picture: shoe5, title: sTitle5, price: sPrice5 },
+        { id: "s6", picture: shoe6, title: sTitle6, price: sPrice6 },
       ],
     },
     women: {
       dress: [
-        { id: 1, picture: dress1, title: dTitle1, price: dPrice1 },
-        { id: 2, picture: dress2, title: dTitle2, price: dPrice2 },
-        { id: 3, picture: dress3, title: dTitle3, price: dPrice3 },
-        { id: 4, picture: dress4, title: dTitle4, price: dPrice4 },
-        { id: 5, picture: dress5, title: dTitle5, price: dPrice5 },
-        { id: 6, picture: dress6, title: dTitle6, price: dPrice6 },
+        { id: "d1", picture: dress1, title: dTitle1, price: dPrice1 },
+        { id: "d2", picture: dress2, title: dTitle2, price: dPrice2 },
+        { id: "d3", picture: dress3, title: dTitle3, price: dPrice3 },
+        { id: "d4", picture: dress4, title: dTitle4, price: dPrice4 },
+        { id: "d5", picture: dress5, title: dTitle5, price: dPrice5 },
+        { id: "d6", picture: dress6, title: dTitle6, price: dPrice6 },
       ],
       purse: [
-        { id: 1, picture: bag1, title: puTitle1, price: puPrice1 },
-        { id: 2, picture: bag2, title: puTitle2, price: puPrice2 },
-        { id: 3, picture: bag3, title: puTitle3, price: puPrice3 },
-        { id: 4, picture: bag4, title: puTitle4, price: puPrice4 },
-        { id: 5, picture: bag5, title: puTitle5, price: puPrice5 },
-        { id: 6, picture: bag6, title: puTitle6, price: puPrice6 },
+        { id: "pu1", picture: bag1, title: puTitle1, price: puPrice1 },
+        { id: "pu2", picture: bag2, title: puTitle2, price: puPrice2 },
+        { id: "pu3", picture: bag3, title: puTitle3, price: puPrice3 },
+        { id: "pu4", picture: bag4, title: puTitle4, price: puPrice4 },
+        { id: "pu5", picture: bag5, title: puTitle5, price: puPrice5 },
+        { id: "pu6", picture: bag6, title: puTitle6, price: puPrice6 },
       ],
     },
     children: {
       all: [
-        { id: 1, picture: kid1, title: kiTitle1, price: kiPrice1 },
-        { id: 2, picture: kid2, title: kiTitle2, price: kiPrice2 },
-        { id: 3, picture: kid3, title: kiTitle3, price: kiPrice3 },
-        { id: 4, picture: kid4, title: kiTitle4, price: kiPrice4 },
-        { id: 5, picture: kid5, title: kiTitle5, price: kiPrice5 },
-        { id: 6, picture: kid6, title: kiTitle6, price: kiPrice6 },
+        { id: "ki1", picture: kid1, title: kiTitle1, price: kiPrice1 },
+        { id: "ki2", picture: kid2, title: kiTitle2, price: kiPrice2 },
+        { id: "ki3", picture: kid3, title: kiTitle3, price: kiPrice3 },
+        { id: "ki4", picture: kid4, title: kiTitle4, price: kiPrice4 },
+        { id: "ki5", picture: kid5, title: kiTitle5, price: kiPrice5 },
+        { id: "ki6", picture: kid6, title: kiTitle6, price: kiPrice6 },
       ],
     },
   };

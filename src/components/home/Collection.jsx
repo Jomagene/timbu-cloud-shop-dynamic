@@ -12,8 +12,6 @@ function Collection({ type, content, yes }) {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
 
-  console.log(products_datA);
-
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
@@ -25,7 +23,7 @@ function Collection({ type, content, yes }) {
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
           className="flex gap-[2.5%]">
-          {products_datA[type][content].map((item) => {
+          {products_datA[type][content].map((item, id) => {
             return (
               <motion.div key={item.id}>
                 <Product
@@ -33,6 +31,7 @@ function Collection({ type, content, yes }) {
                   title={item.title}
                   price={item.price}
                   like={true}
+                  id={id}
                 />
               </motion.div>
             );

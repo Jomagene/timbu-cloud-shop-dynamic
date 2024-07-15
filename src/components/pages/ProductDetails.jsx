@@ -2,8 +2,15 @@ import GridPicture from "../product-details/GridPicture";
 import Details from "../product-details/Details";
 import Collection from "../home/Collection";
 import ReturnToTopButton from "../global/ReturnToTop";
+import { useLocation } from "react-router-dom";
+import { useProducts } from "../../productContext";
 
 function ProductDetails() {
+  const { products_datA, loading, error } = useProducts();
+  const location = useLocation();
+
+  console.log(location.state);
+  console.log(products_datA);
   return (
     <main className="wrapper mb-24 overflow-hidden flex flex-col gap-5">
       <div className=" flex flex-col lg:flex-row justify-between">
