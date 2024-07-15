@@ -75,19 +75,19 @@ export const ProductProvider = ({ children }) => {
   );
 
   const [pant1, pant2, pant3, pant4, pant5, pant6] = pants.map(
-    (item) => `https://api.timbu.cloud/images/${item.photos[0]?.url}`
+    (item) => `https://api.timbu.cloud/images/${item.photos[3]?.url}`
   );
   const [shoe1, shoe2, shoe3, shoe4, shoe5, shoe6] = shoes.map(
-    (item) => `https://api.timbu.cloud/images/${item.photos[0]?.url}`
+    (item) => `https://api.timbu.cloud/images/${item.photos[3]?.url}`
   );
   const [dress1, dress2, dress3, dress4, dress5, dress6] = dresses.map(
-    (item) => `https://api.timbu.cloud/images/${item.photos[0]?.url}`
+    (item) => `https://api.timbu.cloud/images/${item.photos[3]?.url}`
   );
   const [bag1, bag2, bag3, bag4, bag5, bag6] = purses.map(
-    (item) => `https://api.timbu.cloud/images/${item.photos[0]?.url}`
+    (item) => `https://api.timbu.cloud/images/${item.photos[3]?.url}`
   );
   const [kid1, kid2, kid3, kid4, kid5, kid6] = kids.map(
-    (item) => `https://api.timbu.cloud/images/${item.photos[0]?.url}`
+    (item) => `https://api.timbu.cloud/images/${item.photos[3]?.url}`
   );
 
   const [sTitle1, sTitle2, sTitle3, sTitle4, sTitle5, sTitle6] = shoes.map(
