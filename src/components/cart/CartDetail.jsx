@@ -1,4 +1,5 @@
-function CartDetail({ yes, pic }) {
+function CartDetail({ yes, pic, price }) {
+  console.log(price);
   return (
     <div
       className={`flex flex-[1] justify-between rounded-[10px] border-solid  ${
@@ -38,14 +39,14 @@ function CartDetail({ yes, pic }) {
             </select>
           ) : (
             <div className="flex-[0.5]">
-              <p className="font-semibold">£32.99</p>
+              <p className="font-semibold">{`${price} NGN`}</p>
             </div>
           )}
         </div>
       </div>
       {!yes ? (
         <div className="grow-[1]">
-          <p className="font-semibold text-[#F15025] text-right">£32.99</p>
+          <p className="font-semibold text-[#F15025] text-right">{`${price} NGN`}</p>
           <p className="font-semibold line-through text-right">£87.99</p>
         </div>
       ) : (

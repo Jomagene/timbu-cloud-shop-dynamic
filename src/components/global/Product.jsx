@@ -5,7 +5,9 @@ function Product({ picture, title, price, like, id, type, content }) {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/product", { state: { id: id, type: type, content: content } });
+    navigate("/product", {
+      state: { id: id, type: type, content: content, price: price },
+    });
   }
   return (
     <div className="flex flex-col items-center">
@@ -27,7 +29,7 @@ function Product({ picture, title, price, like, id, type, content }) {
       <span className="text-[15px] lg:text-[18px] my-[4px] lg:my-[6px]">
         {title}
       </span>
-      <span className="text-[16px] lg:text-[20px] font-medium">{price}</span>
+      <span className="text-[16px] lg:text-[20px] font-medium">{`${price} NGN`}</span>
     </div>
   );
 }

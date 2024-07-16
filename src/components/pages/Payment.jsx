@@ -10,10 +10,11 @@ function Payment() {
   const [visible, setVisible] = useState("");
   const location = useLocation();
   const pic = location.state.pic;
+  const price = location.state.price;
 
   const navigate = useNavigate();
   function handleClick() {
-    navigate("/product/payment/success", { state: { pic: pic } });
+    navigate("/product/payment/success", { state: { pic: pic, price: price } });
   }
 
   const paymentMethods = {
@@ -164,19 +165,19 @@ function Payment() {
           <div className="rounded-[10px] p-[30px] flex flex-col gap-[20px]">
             <div className="flex justify-between border-b border-solid border-gray-300 p-1 text-[10px] sm:text-[14px] lg:text-[18px]">
               <span>Subtotal</span>
-              <span>£32.99</span>
+              <span>{`${price} NGN`}</span>
             </div>
             <div className="flex justify-between border-b border-solid border-gray-300 p-1 text-[10px] sm:text-[14px] lg:text-[18px]">
               <span>Tax</span>
-              <span>£1.99</span>
+              <span>2 NGN</span>
             </div>
             <div className="flex justify-between border-b border-solid border-gray-300 p-1 text-[10px] sm:text-[14px] lg:text-[18px]">
               <span>Delivery</span>
-              <span>£2.99</span>
+              <span>3 NGN</span>
             </div>
             <div className="flex justify-between py-2 font-semibold text-[14px] sm:text-[20px] lg:text-[24px]">
               <span>Total</span>
-              <span>£37.99</span>
+              <span>{`${price + 2 + 3} NGN`}</span>
             </div>
             <div onClick={() => handleClick()}>
               <Link to="/product/payment/success">

@@ -11,18 +11,19 @@ import {
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import { Link, useNavigate } from "react-router-dom";
 
-function Details({ pic }) {
+function Details({ pic, price }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
 
   const navigate = useNavigate();
 
-  const handleClick = () => navigate("/product/cart", { state: { pic: pic } });
+  const handleClick = () =>
+    navigate("/product/cart", { state: { pic: pic, price: price } });
   return (
     <div className="flex-[1] flex flex-col gap-[20px]">
       <div>
         <h1 className="font-normal text-[22px] pb-4">Ochild Flip</h1>
-        <p className="font-medium">£32.99</p>
+        <p className="font-medium">{`${price} NGN`}</p>
       </div>
       <div className="hidden xl:flex gap-3">
         <div className="flex-[1]">
@@ -88,7 +89,7 @@ function Details({ pic }) {
               </div>
               <div className="flex flex-col gap-[7px]">
                 <span className="text-[18px] font-semibold">Ochid Filip</span>
-                <span className="text-[18px] font-semibold">£32.99</span>
+                <span className="text-[18px] font-semibold">{`${price} NGN`}</span>
                 <span className="text-[18px] font-semibold">
                   Size: Medium (M)
                 </span>
@@ -135,7 +136,7 @@ function Details({ pic }) {
             <span className="text-[#F15025] font-medium">Express</span>
           </div>
           <div className="flex flex-col">
-            <span className="font-normal text-[16px]">£2.99</span>
+            <span className="font-normal text-[16px]">3 NGN</span>
             <span>1/2 days</span>
           </div>
         </div>
@@ -148,7 +149,7 @@ function Details({ pic }) {
             <span className="text-[#F15025] font-medium">Standard</span>
           </div>
           <div className="flex flex-col">
-            <span className="font-normal text-[16px]">£2.99</span>
+            <span className="font-normal text-[16px]">3 NGN</span>
             <span>4/7 days</span>
           </div>
         </div>

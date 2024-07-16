@@ -109,28 +109,23 @@ export const ProductProvider = ({ children }) => {
     (item) =>
       item.current_price?.[0]?.NGN?.[0] || item.current_price?.[0]?.CDF?.[0]
   );
-  console.log(sPrice1);
   const [pPrice1, pPrice2, pPrice3, pPrice4, pPrice5, pPrice6] = pants.map(
     (item) =>
       item.current_price?.[0]?.NGN?.[0] || item.current_price?.[0]?.CDF?.[0]
   );
-  console.log(pPrice1);
   const [puPrice1, puPrice2, puPrice3, puPrice4, puPrice5, puPrice6] =
     purses.map(
       (item) =>
         item.current_price?.[0]?.NGN?.[0] || item.current_price?.[0]?.CDF?.[0]
     );
-  console.log(puPrice1);
   const [dPrice1, dPrice2, dPrice3, dPrice4, dPrice5, dPrice6] = dresses.map(
     (item) =>
       item.current_price?.[0]?.NGN?.[0] || item.current_price?.[0]?.CDF?.[0]
   );
-  console.log(pPrice1);
   const [kiPrice1, kiPrice2, kiPrice3, kiPrice4, kiPrice5, kiPrice6] = kids.map(
     (item) =>
       item.current_price?.[0]?.NGN?.[0] || item.current_price?.[0]?.CDF?.[0]
   );
-  console.log(kiPrice1);
 
   const [Pic0_1, Pic0_2, Pic0_3, Pic0_4, Pic0_5, Pic0_6] = pants.map(
     (item) => `https://api.timbu.cloud/images/${item.photos[0]?.url}`

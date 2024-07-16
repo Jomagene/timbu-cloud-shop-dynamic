@@ -9,7 +9,7 @@ function ProductDetails() {
   const { products_datA, loading, error } = useProducts();
 
   const location = useLocation();
-  let { id, type, content } = location.state;
+  let { id, type, content, price } = location.state;
   const element = products_datA[type][content].filter((item) => item.id == id);
 
   console.log(element);
@@ -24,7 +24,7 @@ function ProductDetails() {
     <main className="wrapper mb-24 overflow-hidden flex flex-col gap-5">
       <div className=" flex flex-col lg:flex-row justify-between">
         <GridPicture pic={pic} pic1={pic1} pic3={pic3} pic2={pic2} />
-        <Details pic={pic} />
+        <Details pic={pic} price={price} />
       </div>
       <h1 className="text-[30px] font-medium">Other related pants</h1>
       <Collection type="men" content="pants" yes={true} />

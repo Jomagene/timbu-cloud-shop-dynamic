@@ -1,27 +1,29 @@
 import { Link, useNavigate } from "react-router-dom";
 import { mastercard, paypal, visa } from "../../assets/icons-images";
 
-function CartPay({ pic }) {
+function CartPay({ pic, price }) {
   const navigate = useNavigate();
   const handleClick = () =>
-    navigate("/product/payment", { state: { pic: pic } });
+    navigate("/product/payment", { state: { pic: pic, price: price } });
   return (
     <div className="bg-[#E6E8E6] flex-[1] rounded-[10px] border-solid border-[1px] p-[30px] flex flex-col gap-[20px]  mt-5">
       <div className="flex justify-between border-b border-solid border-[#CED0CE] p-1 text-[10px] sm:text-[12px] lg:text-[18px] ">
         <span>Subtotal</span>
-        <span>£32.99</span>
+        <span>{`${price} NGN`}</span>
       </div>
       <div className="flex justify-between border-b border-solid border-[#CED0CE] p-1 text-[10px] sm:text-[12px] lg:text-[18px]">
         <span>Tax</span>
-        <span>£1.99</span>
+        <span>2 NGN</span>
       </div>
       <div className="flex justify-between border-b border-solid border-[#CED0CE] p-1 text-[10px] sm:text-[12px] lg:text-[18px]">
         <span>Delivery</span>
-        <span>£2.99</span>
+        <span> 3 NGN</span>
       </div>
       <div className="flex justify-between py-2 font-semibold">
         <span className="text-[18px] lg:text-[24px]">Total</span>
-        <span className="text-[18px] lg:text-[24px]">£37.99</span>
+        <span className="text-[18px] lg:text-[24px]">{`${
+          price + 2 + 3
+        } NGN`}</span>
       </div>
       <div onClick={() => handleClick()}>
         <Link to="/product/payment">
