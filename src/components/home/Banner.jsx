@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { bannerImg } from "../../assets/icons-images";
 import Button from "../global/Button";
 
@@ -13,12 +12,10 @@ function Banner() {
           Our curated collection of high-quality clothing is designed to make
           you look and feel your best, no
         </p>
-        <Link to="/product">
-          <Button
-            content="Shop the collection"
-            styles="text-[14px] lg:text-[22px] rounded-[10px] p-[12px] md:p-[20px] bg-[#F15025] hover:bg-[#f15125e0] text-white font-semibold w-[276px] md:w-fit"
-          />
-        </Link>
+        <Button
+          content="Shop the collection"
+          styles="text-[14px] lg:text-[22px] rounded-[10px] p-[12px] md:p-[20px] bg-[#F15025] hover:bg-[#f15125e0] text-white font-semibold w-[276px] md:w-fit"
+        />
       </div>
       <div className="flex-[1] object-contain overflow-hidden h-[470px] min-w-[280px] sm:min-w-[400px] rounded-none sm:rounded-2xl lg:rounded-none my-[20px] w-full">
         <img

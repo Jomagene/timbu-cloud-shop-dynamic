@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { mastercard, visa } from "../../assets/icons-images";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HomeIcon from "@mui/icons-material/Home";
@@ -8,6 +8,13 @@ import { useState } from "react";
 
 function Payment() {
   const [visible, setVisible] = useState("");
+  const location = useLocation();
+  const pic = location.state.pic;
+
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate("/product/payment/success", { state: { pic: pic } });
+  }
 
   const paymentMethods = {
     mc: "Master card",
@@ -171,15 +178,17 @@ function Payment() {
               <span>Total</span>
               <span>£37.99</span>
             </div>
-            <Link to="/product/payment/success">
-              <button
-                className={`p-[10px] ${
-                  visible ? "bg-[#F15025] text-white" : "bg-[#DFDDDC]"
-                } rounded-md w-full font-semibold border border-solid text-[14px] sm:text-[18px]`}
-                type="submit">
-                Confirm payment
-              </button>
-            </Link>
+            <div onClick={() => handleClick()}>
+              <Link to="/product/payment/success">
+                <button
+                  className={`p-[10px] ${
+                    visible ? "bg-[#F15025] text-white" : "bg-[#DFDDDC]"
+                  } rounded-md w-full font-semibold border border-solid text-[14px] sm:text-[18px]`}
+                  type="submit">
+                  Confirm payment
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

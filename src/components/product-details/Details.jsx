@@ -1,9 +1,4 @@
-import {
-  black_pant2,
-  blue_pant2,
-  favorite,
-  pant2,
-} from "../../assets/icons-images";
+import { favorite } from "../../assets/icons-images";
 import React from "react";
 import {
   Button,
@@ -14,12 +9,15 @@ import {
 } from "@material-tailwind/react";
 
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Details() {
+function Details({ pic }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(!open);
 
+  const navigate = useNavigate();
+
+  const handleClick = () => navigate("/product/cart", { state: { pic: pic } });
   return (
     <div className="flex-[1] flex flex-col gap-[20px]">
       <div>
@@ -28,15 +26,15 @@ function Details() {
       </div>
       <div className="hidden xl:flex gap-3">
         <div className="flex-[1]">
-          <img src={pant2} alt="" className="rounded-[5px]" />
+          <img src={pic} alt="" className="rounded-[5px]" />
           <h2 className="text-center pt-[10px]">Grey</h2>
         </div>
         <div className="flex-[1]">
-          <img src={black_pant2} alt="" className="rounded-[5px]" />
+          <img src={pic} alt="" className="rounded-[5px]" />
           <h2 className="text-center pt-[10px]">Black</h2>
         </div>
         <div className="flex-[1]">
-          <img src={blue_pant2} alt="" className="rounded-[5px]" />
+          <img src={pic} alt="" className="rounded-[5px]" />
           <h2 className="text-center pt-[10px]">Blue</h2>
         </div>
       </div>
@@ -86,7 +84,7 @@ function Details() {
                 justifyContent: "center",
               }}>
               <div className="h-[200px]">
-                <img src={pant2} alt="" className="h-[90%]" />
+                <img src={pic} alt="" className="h-[90%]" />
               </div>
               <div className="flex flex-col gap-[7px]">
                 <span className="text-[18px] font-semibold">Ochid Filip</span>
@@ -96,7 +94,7 @@ function Details() {
                 </span>
               </div>
             </DialogBody>
-            <DialogFooter>
+            <DialogFooter onClick={() => handleClick()}>
               <Link
                 to="/product/cart"
                 style={{

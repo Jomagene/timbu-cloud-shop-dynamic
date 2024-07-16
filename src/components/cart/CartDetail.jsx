@@ -1,6 +1,4 @@
-import { pant2 } from "../../assets/icons-images";
-
-function CartDetail({ yes }) {
+function CartDetail({ yes, pic }) {
   return (
     <div
       className={`flex flex-[1] justify-between rounded-[10px] border-solid  ${
@@ -9,7 +7,7 @@ function CartDetail({ yes }) {
       <div className="flex gap-[10px] lg:gap-[20px] flex-[1]">
         <div className="flex-[1] flex flex-col items-center">
           <div className="h-[110px] w-[110px] lg:w-[150px] lg:h-[150px] object-cover object-bottom rounded-lg overflow-hidden">
-            <img src={pant2} alt="" className="" />
+            <img src={pic} alt="" className="" />
           </div>
           <h1 className="font-medium text-[14px] sm:text-[18px] lg:text-[24px] pt-5">
             Ochild Flip
